@@ -8,6 +8,7 @@ class CreateDrafts < ActiveRecord::Migration
       t.string :status
       t.integer :idea_id
 
+      t.belongs_to :idea
       t.timestamps
     end
   end

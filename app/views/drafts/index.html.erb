@@ -1,14 +1,14 @@
-<h1>Listing drafts</h1>
+<h1>Drafts of <%= @idea.title %> </h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Number</th>
+      <th>No.</th>
       <th>Title</th>
       <th>Blurb</th>
       <th>Body</th>
       <th>Status</th>
-      <th>Idea</th>
+      <th>Idea id</th>
       <th></th>
       <th></th>
       <th></th>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Draft', new_draft_path %>
+<%= link_to 'New Draft', new_idea_draft_path %>

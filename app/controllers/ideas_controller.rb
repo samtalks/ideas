@@ -4,7 +4,7 @@ class IdeasController < ApplicationController
   # GET /ideas
   # GET /ideas.json
   def index
-    @ideas = Idea.all
+    @ideas = Idea.all.select {|x| x.user_id.to_s == params[:user_id]}
   end
 
   # GET /ideas/1

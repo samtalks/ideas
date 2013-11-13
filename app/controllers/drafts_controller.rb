@@ -4,7 +4,9 @@ class DraftsController < ApplicationController
   # GET /drafts
   # GET /drafts.json
   def index
-    @drafts = Draft.all
+    @drafts = Draft.all.select {|x| x.idea_id.to_s == params[:idea_id]}
+    @idea = Idea.find(params[:idea_id])
+    # @drafts = Draft.all
   end
 
   # GET /drafts/1

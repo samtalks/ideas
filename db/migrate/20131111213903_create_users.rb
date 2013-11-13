@@ -8,6 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.string :salt
 
+      t.has_many :ideas
       t.timestamps
     end
   end

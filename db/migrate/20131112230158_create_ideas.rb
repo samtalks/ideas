@@ -4,6 +4,8 @@ class CreateIdeas < ActiveRecord::Migration
       t.string :title
       t.integer :user_id
 
+      t.has_many :drafts
+      t.belongs_to :user
       t.timestamps
     end
   end
